@@ -1,3 +1,7 @@
+require 'simplecov'
+SimpleCov.start
+
+
 require './lib/file_reader'
 
 RSpec.describe FileReader do
@@ -8,5 +12,9 @@ RSpec.describe FileReader do
     expect(file_reader).to be_a(FileReader)
   end
 
+  it "can read a file" do
 
+
+
+  end
 end
