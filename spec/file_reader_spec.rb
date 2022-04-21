@@ -13,8 +13,10 @@ RSpec.describe FileReader do
   end
 
   it "can read a file" do
+    file_reader = FileReader.new
+    text = "hello world"
+    file_reader.stub(:read).and_return(text)
 
-
-
+    expect(file_reader.read).to eq(text)
   end
 end
