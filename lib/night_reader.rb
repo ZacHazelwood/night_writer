@@ -8,4 +8,9 @@ class NightReader
     @file_reader = FileReader.new.read
   end
 
+  def confirmation_display
+
+  end
+
+
 end

@@ -14,4 +14,10 @@ RSpec.describe NightReader do
     expect(night_reader).to be_a(NightReader)
     expect(night_reader.read).to eq(text)
   end
+
+  it "displays a confirmation message" do
+    night_reader = NightReader.new
+
+    expect(night_reader.confirmation_display).to be_a(String)
+  end
 end
