@@ -1,6 +1,7 @@
 # require?
-
 class FileReader
-
-
-end  
+  def read
+    file_to_read = ARGV[0]
+    File.read(file_to_read)
+  end
+end
