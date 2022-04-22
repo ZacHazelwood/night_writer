@@ -9,7 +9,8 @@ class NightReader
   end
 
   def confirmation_display
-
+    total_characters = @file_reader.chomp.length
+      puts "Created '#{ARGV[1]}' containing #{total_characters} characters."
   end
 
 
