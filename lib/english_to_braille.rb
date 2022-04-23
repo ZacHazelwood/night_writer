@@ -1,9 +1,10 @@
-class EnglishToBraille
+module EnglishToBraille
 
-  attr_reader :english_to_braille_hash
+  # attr_reader :english_to_braille_hash
 
-  def initialize
-    @english_to_braille_hash = {
+  # def initialize
+  def english_to_braille_hash
+    {
       "a" => ["0.", "..", ".."],
       "b" => ["0.", "0.", ".."],
       "c" => ["00", "..", ".."],
@@ -33,4 +34,8 @@ class EnglishToBraille
       " " => ["..", "..", ".."]
     }
   end
+
+  # def convert_letter_to_braille(letter)
+  #   @english_to_braille_hash[letter]
+  # end
 end
