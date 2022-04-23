@@ -1,4 +1,3 @@
-# require?
 class FileReader
   def read
     file_to_read = ARGV[0]
