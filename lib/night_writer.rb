@@ -9,8 +9,13 @@ class NightWriter
   def initialize
     @file_reader = FileReader.new.read
     @file_writer = FileWriter.new
+    @file_writer.write_file
   end
+
+  def confirmation_message
+
+  end  
+
 end
 
 night_reader = NightWriter.new
-
