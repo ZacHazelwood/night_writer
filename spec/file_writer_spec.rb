@@ -10,6 +10,4 @@ RSpec.describe FileWriter do
 
     expect(file_writer).to be_a(FileWriter)    
   end
-
-
 end

@@ -10,7 +10,7 @@ class NightWriter
     @file_reader = FileReader.new.read
     @file_writer = FileWriter.new
   end
-
 end
 
 night_reader = NightWriter.new
+

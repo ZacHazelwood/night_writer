@@ -11,5 +11,4 @@ RSpec.describe NightWriter do
 
     expect(night_writer).to be_a(NightWriter)
   end
-
 end
