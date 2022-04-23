@@ -34,4 +34,7 @@ class EnglishToBraille
     }
   end
 
+  def english_to_braille(character)
+    @braille_from_english[character]
+  end
 end
