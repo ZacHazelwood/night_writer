@@ -1,4 +1,3 @@
-
 class FileWriter
 
   attr_reader :written_file,
@@ -10,7 +9,7 @@ class FileWriter
   end
 
   def write_file
-    @total_char_count = File.write(@written_file, "w")
+    @total_char_count = File.new(@written_file, "w")
   end
 
 end

@@ -1,4 +1,4 @@
-require "./lib/file_reader"
+require './lib/file_reader'
 require './lib/file_writer'
 
 class NightWriter
@@ -13,9 +13,11 @@ class NightWriter
   end
 
   def confirmation_message
-
-  end  
+    total_characters = @file_reader.chomp.length
+    puts "Created #{ARGV[1]} containing #{total_characters} characters."
+  end
 
 end
 
-night_reader = NightWriter.new
+night_writer = NightWriter.new
+puts night_writer.confirmation_message
