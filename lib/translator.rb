@@ -6,21 +6,18 @@ class Translator
   attr_reader :text,
               :dictionary
 
-  # def initialize(text, dictionary)
-  #   @text = text
-  #   @dictionary = dictionary
-  # end
-
-  def initialize(test)
-    @test = test
-    @converted_braille = []
+  def initialize(text)
+    @text = text
+    @dictionary = dictionary
   end
 
   def convert_to_braille
-    english_letters = @test.chars
+    # require "pry"; binding.pry
+    english_letters = @text.chars
+    converted_braille = []
     (english_letters.count).times do |letter|
-      @converted_braille << english_to_braille_hash[english_letters.shift]
+      converted_braille << ENGLISH_TO_BRAILLE_HASH[english_letters.shift]
     end
-      @converted_braille
+      converted_braille
   end
 end
