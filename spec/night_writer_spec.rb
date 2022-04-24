@@ -26,15 +26,7 @@ RSpec.describe NightWriter do
     expect(night_writer.confirmation_message).to eq(nil)
   end
 end
-describe EnglishToBraille do
 
-  xit "contains a hash" do
-    night_writer = NightWriter.new("test_message.txt", "test_output.txt")
-
-    expect(night_writer.ENGLISH_TO_BRAILLE_HASH).to be_a(Hash)
-  end
-
-end
 describe FileReaderAndWriter do
 
   it "#read_file" do
@@ -42,7 +34,7 @@ describe FileReaderAndWriter do
   end
 
   it "#create_output_file" do
-    
+
   end
 
 end
