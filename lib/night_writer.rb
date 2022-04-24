@@ -5,21 +5,12 @@ require './lib/translator'
 class NightWriter
   include FileReaderAndWriter
 
-  attr_reader :file_reader,
-              :file_writer
-
-
-# Get instances out of initialize
-  # def initialize
-  #   @file_reader = FileReader.new.read
-  #   @file_writer = FileWriter.new
-  #   @file_writer.write_file
-  # end
+  attr_reader :input_file_name,
+              :output_file_name
 
   def initialize(input_file_name, output_file_name)
     @input_file_name = input_file_name
     @output_file_name = output_file_name
-    # confirmation_message
   end
 
   def confirmation_message(output_file_name)
@@ -29,7 +20,7 @@ class NightWriter
   end
 
   def do_the_thing
-    # require "pry"; binding.pry
+    require "pry"; binding.pry
     text = read_file(@input_file_name)
     # translated_characters = Translator.new(text).translate
     create_output_file(@output_file_name, text)
