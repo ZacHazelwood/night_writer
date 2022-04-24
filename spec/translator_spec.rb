@@ -20,8 +20,6 @@ RSpec.describe Translator do
     expect(translator.text).to eq("a")
   end
 
-# Refactor tests for testing
-
   it "can convert 1 letter to braille" do
     text = "a"
     translator = Translator.new(text)

@@ -1,6 +1,6 @@
 module EnglishToBraille
 
-  attr_reader :english_to_braille_hash
+  attr_reader :english_to_braille_hash # Not sure if I need this
 
   ENGLISH_TO_BRAILLE_HASH = {
       "a" => ["0.", "..", ".."],
