@@ -20,4 +20,8 @@ class Translator
     end
       converted_braille
   end
+
+  def arrange_braille(converted_braille)
+
+  end
 end

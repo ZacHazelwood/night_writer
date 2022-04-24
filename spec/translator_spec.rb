@@ -41,4 +41,17 @@ RSpec.describe Translator do
 
     expect(translator.convert_to_braille).to eq([["0.", "..", ".."], ["..", "..", ".."], ["0.", ".0", "00"]])
   end
+
+  it "can arrange braille vertically" do
+    text = "a"
+    translator = Translator.new(text)
+
+    expected = [
+      ["0."],
+      [".."],
+      [".."]
+    ]
+
+    expect(translator.arrange_braille(converted_braille)).to eq(expected)
+  end
 end
