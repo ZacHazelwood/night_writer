@@ -8,7 +8,7 @@ class Translator
 
   def initialize(text)
     @text = text
-    @dictionary = dictionary
+    @dictionary = ENGLISH_TO_BRAILLE_HASH
   end
 
   def convert_to_braille
@@ -16,7 +16,7 @@ class Translator
     english_letters = @text.chars
     converted_braille = []
     (english_letters.count).times do |letter|
-      converted_braille << ENGLISH_TO_BRAILLE_HASH[english_letters.shift]
+      converted_braille << @dictionary[english_letters.shift]
     end
       converted_braille
   end

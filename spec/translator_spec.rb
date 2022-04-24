@@ -18,6 +18,7 @@ RSpec.describe Translator do
     translator = Translator.new(text)
 
     expect(translator.text).to eq("a")
+    expect(translator.dictionary).to be_a(Hash)
   end
 
   it "can convert 1 letter to braille" do
@@ -40,5 +41,4 @@ RSpec.describe Translator do
 
     expect(translator.convert_to_braille).to eq([["0.", "..", ".."], ["..", "..", ".."], ["0.", ".0", "00"]])
   end
-
 end
