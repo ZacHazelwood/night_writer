@@ -9,10 +9,10 @@ require './test_output'
 RSpec.describe NightWriter do
 
   it "exists" do
-    # require "pry"; binding.pry
     input_file_name = "test_message.txt"
     output_file_name = "test_output.txt"
     night_writer = NightWriter.new(input_file_name, output_file_name)
+    # require "pry"; binding.pry
     # allow(night_writer).to receive(input_file_name).and_return("test_message.txt")
     # allow(night_writer).to receive(output_file_name).and_return("test_output.txt")
 

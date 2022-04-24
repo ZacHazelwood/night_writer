@@ -20,10 +20,10 @@ class NightWriter
   end
 
   def do_the_thing
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
     text = read_file(@input_file_name)
-    # translated_characters = Translator.new(text).translate
-    create_output_file(@output_file_name, text)
+    translated_characters = Translator.new(text).arrange_braille
+    create_output_file(@output_file_name, translated_characters)
     # Get create to output a file and confirmation_message to take that as an argument
     confirmation_message(@output_file_name)
   end
