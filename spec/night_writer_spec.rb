@@ -35,7 +35,6 @@ end
 describe FileReaderAndWriter do
 
   it "#read_file" do
-    # require "pry"; binding.pry
     input_file_name = "test_message.txt"
     output_file_name = "test_output.txt"
     night_writer = NightWriter.new(input_file_name, output_file_name)
@@ -51,10 +50,4 @@ describe FileReaderAndWriter do
 
     expect(night_writer.create_output_file(output_file_name, text)).to eq(3)
   end
-
 end
-
-
-# allow(:run).to_require
-# ARGV = ['message.txt', 'braille.txt']
-# allow(input_file_name).to receive(:read_file).with('message.txt')
