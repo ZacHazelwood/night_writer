@@ -21,16 +21,9 @@ class Translator
   end
 
   def arrange_braille
-    format_sentences = []
     joined_sentences = []
     output_braille = ""
-    transpose_conversion.map do |segment|
-        top = segment[0].join
-        mid = segment[1].join
-        bot = segment[2].join
-        format_sentences << [top, mid, bot]
-      end
-      format_sentences.each do |sentence|
+      format_into_sentences.each do |sentence|
         sentence.each do |line|
           joined_sentences << line
         end
@@ -51,7 +44,14 @@ class Translator
   end
 
   def format_into_sentences
-
+    format_sentences = []
+    transpose_conversion.map do |segment|
+      top = segment[0].join
+      mid = segment[1].join
+      bot = segment[2].join
+      format_sentences << [top, mid, bot]
+    end
+    format_sentences
   end
   # def arrange_braille
   #   transposed_sentence = []
