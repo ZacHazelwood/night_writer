@@ -76,8 +76,13 @@ describe "Helper methods" do
   end
 
   it "transposes the converted braille characters" do
-# require "pry"; binding.pry
-    expect(@translator.transposed_conversion).to be_a(Array)
+
+    expect(@translator.transpose_conversion).to be_a(Array)
+  end
+
+  it "formats the transposed conversion into braille lines" do
+
+    expect(@translator.format_into_sentences).to be_a(Array)
   end
 
 
