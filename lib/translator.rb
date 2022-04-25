@@ -53,6 +53,10 @@ class Translator
     end
     format_sentences
   end
+
+  def join_sentences
+
+  end
   # def arrange_braille
   #   transposed_sentence = []
   #   format_sentences = []

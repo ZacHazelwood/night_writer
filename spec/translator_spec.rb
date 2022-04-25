@@ -85,5 +85,10 @@ describe "Helper methods" do
     expect(@translator.format_into_sentences).to be_a(Array)
   end
 
+  it "joins sentences into a single Array with 1 element" do
+
+    expect(@translator.join_sentences).to be_a(Array)
+    expect(@translator.join_sentences.length).to eq(1)  
+  end
 
 end
