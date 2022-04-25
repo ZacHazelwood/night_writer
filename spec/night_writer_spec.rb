@@ -35,3 +35,8 @@ describe FileReaderAndWriter do
   end
 
 end
+
+
+# allow(:run).to_require
+# ARGV = ['message.txt', 'braille.txt']
+# allow(input_file_name).to receive(:read_file).with('message.txt')
