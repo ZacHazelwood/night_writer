@@ -21,14 +21,8 @@ class Translator
   end
 
   def arrange_braille
-    joined_sentences = []
     output_braille = ""
-      format_into_sentences.each do |sentence|
-        sentence.each do |line|
-          joined_sentences << line
-        end
-      end
-      joined_sentences.each do |line|
+      join_sentences.each do |line|
         output_braille += "#{line}\n"
       end
     output_braille
@@ -55,7 +49,13 @@ class Translator
   end
 
   def join_sentences
-
+    joined_sentences = []
+    format_into_sentences.each do |sentence|
+      sentence.each do |line|
+        joined_sentences << line
+      end
+    end
+    joined_sentences
   end
   # def arrange_braille
   #   transposed_sentence = []
