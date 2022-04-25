@@ -68,3 +68,17 @@ RSpec.describe Translator do
     expect(translator.arrange_braille).to eq(expected)
   end
 end
+
+describe "Helper methods" do
+  before :each do
+    @text = "this is a sentence with at least forty characters"
+    @translator = Translator.new(@text)
+  end
+
+  it "transposes the converted braille characters" do
+require "pry"; binding.pry
+    expect(@translator.transposed_conversion).to eq(nil)
+  end
+
+
+end

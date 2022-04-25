@@ -45,4 +45,33 @@ class Translator
       end
     output_braille
   end
+
+  def transposed_conversion
+
+  end  
+  # def arrange_braille
+  #   transposed_sentence = []
+  #   format_sentences = []
+  #   joined_sentences = []
+  #   output_braille = ""
+  #   translated_braille = self.convert_to_braille
+  #     translated_braille.each do |sentence|
+  #       transposed_sentence << sentence.transpose
+  #     end
+  #     transposed_sentence.map do |segment|
+  #       top = segment[0].join
+  #       mid = segment[1].join
+  #       bot = segment[2].join
+  #       format_sentences << [top, mid, bot]
+  #     end
+  #     format_sentences.each do |sentence|
+  #       sentence.each do |line|
+  #         joined_sentences << line
+  #       end
+  #     end
+  #     joined_sentences.each do |line|
+  #       output_braille += "#{line}\n"
+  #     end
+  #   output_braille
+  # end
 end
