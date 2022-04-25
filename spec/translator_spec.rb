@@ -76,8 +76,8 @@ describe "Helper methods" do
   end
 
   it "transposes the converted braille characters" do
-require "pry"; binding.pry
-    expect(@translator.transposed_conversion).to eq(nil)
+# require "pry"; binding.pry
+    expect(@translator.transposed_conversion).to be_a(Array)
   end
 
 
