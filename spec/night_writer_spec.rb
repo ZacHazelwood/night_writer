@@ -3,27 +3,29 @@ SimpleCov.start
 
 require './lib/file_reader_and_writer'
 require './lib/night_writer'
-require './test_message'
-require './test_output'
+# require './test_message'
+# require './test_output'
 
 RSpec.describe NightWriter do
 
   it "exists" do
     input_file_name = "test_message.txt"
     output_file_name = "test_output.txt"
+# require "pry"; binding.pry
     night_writer = NightWriter.new(input_file_name, output_file_name)
-    # require "pry"; binding.pry
     # allow(night_writer).to receive(input_file_name).and_return("test_message.txt")
     # allow(night_writer).to receive(output_file_name).and_return("test_output.txt")
 
     expect(night_writer).to be_a(NightWriter)
   end
 
-  xit "displays a confirmation message" do
-    night_writer = NightWriter.new
-# No idea how I tested this the first time; but at least the correct message is
-# displayed in the Terminal. ¯\_(ツ)_/¯
-    expect(night_writer.confirmation_message).to eq(nil)
+  it "displays a confirmation message" do
+    input_file_name = "test_message.txt"
+    output_file_name = "test_output.txt"
+    night_writer = NightWriter.new(input_file_name, output_file_name)
+
+    expect(night_writer.confirmation_message(output_file_name)).to eq(nil)
+    # => "Created test_output.txt containing 218 characters."
   end
 end
 

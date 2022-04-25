@@ -1,6 +1,7 @@
-require './lib/file_reader_and_writer'
-require './lib/translator'
-
+# require './lib/file_reader_and_writer'
+# require './lib/translator'
+require_relative 'file_reader_and_writer'
+require_relative 'translator'
 
 class NightWriter
   include FileReaderAndWriter
@@ -29,4 +30,4 @@ class NightWriter
   end
 end
 
-night_writer = NightWriter.new(ARGV[0], ARGV[1]).do_the_thing
+# night_writer = NightWriter.new(ARGV[0], ARGV[1]).do_the_thing
