@@ -8,7 +8,7 @@ To translate, clone this repository and access the runner file within the comman
 ```
 $ ruby ./lib/night_writer_runner.rb message.txt braille.txt
 ```
-`message.txt` is to be formatted with lowercase letters and no special characters: `[ ' , . ! ? ; ]` Line breaks will be deleted if the text contains line breaks.
+`message.txt` will transform all letters into lowercase and cannot contain special characters: `[ ' , . ! ? ; ]` Line breaks will be deleted if the text contains line breaks.
 
 Once translated, the Terminal will output the following line:
 ```
