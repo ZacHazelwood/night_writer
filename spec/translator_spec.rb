@@ -24,7 +24,17 @@ RSpec.describe Translator do
     text = "a"
     translator = Translator.new(text)
 
-    expect(translator.convert_to_braille).to eq([[["0.", "..", ".."]]])
+  end
+
+  it "cannot read special characters" do
+    text = "!"
+    translator = Translator.new(text)
+
+    expect(translator.convert_to_braille).to eq([[nil]])
+
+    text2 = "a!"
+    translator2 = Translator.new(text2)
+    expect(translator2.convert_to_braille).to eq([[["0.", "..", ".."], nil]])
   end
 
   it "can convert 2 letters to braille" do

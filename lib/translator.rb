@@ -22,7 +22,7 @@ class Translator
 # Helper methods for #arrange_braille
 
   def convert_to_braille
-    english_letters = @text.chars
+    english_letters = @text.downcase.chars
     converted_braille = []
     (english_letters.count).times do |letter|
       converted_braille << @dictionary[english_letters.shift]
